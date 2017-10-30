@@ -1,0 +1,199 @@
+#main-header {
+	// position: fixed; // for fixed header
+	padding: 1.5em;
+	width: calc(100% - 3em);
+	font-size: 1.5em;
+	background: $bodyBG;
+	color: $white;
+
+	dl {
+		span {
+			color: $white;
+		}
+	}
+	dt {
+		color: $red;
+	}
+
+	dd {
+		margin-left: 50px;
+		color: $blue;
+
+		h2 {
+			display: inline-block;
+		}
+		
+		strong {
+			font-weight: 400;
+			color: $purp;
+		}
+		em {
+			font-style: normal;
+			color: $pale;
+		}
+	}
+}
+
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+// animate the typed.js cursor, yo...
+.typed-cursor {
+	-moz-animation: blink 0.7s infinite;
+	-ms-animation: blink 0.7s infinite;
+	-o-animation: blink 0.7s infinite;
+	-webkit-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+		50% {
+			opacity: 0;
+	}
+		100% {
+			opacity: 1;
+	}
+}
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+		50% {
+			opacity: 0;
+	}
+		100% {
+			opacity: 1;
+	}
+}
+@-moz-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+		50% {
+			opacity: 0;
+	}
+		100% {
+			opacity: 1;
+	}
+}
+@-ms-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+		50% {
+			opacity: 0;
+	}
+		100% {
+			opacity: 1;
+	}
+}
+@-o-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+		50% {
+			opacity: 0;
+	}
+		100% {
+			opacity: 1;
+	}
+}
+
+article {
+	margin-bottom: 4em;
+	padding: 2em;
+	transition: 1s opacity;
+
+	&.hide {
+		opacity: 0;
+	}
+
+	header {
+		// margin-top: 7em !important; // for fixed header
+	}
+
+	footer {
+		display: grid;
+		grid-template-columns: 60% 40%;
+		grid-template-rows: auto auto;
+		h2 {
+			margin-bottom: 1em;
+			font-size: 1.5em;
+			font-weight: 600;
+		}
+		li {
+			padding: 0.25em 0;
+
+			&:first-of-type {
+				padding-top: 0;
+			}
+		}
+		#vidja {
+			float: right;
+		}
+	}
+}
+code {
+	display: inline-block;
+	margin: 2em 0;
+	padding: 1em;
+	font-family: $monoFont;
+	background: $bodyBG;
+	color: $bodyBG;
+	transition: 0.3s color;
+
+	&.show {
+		color: $white;
+
+		div {
+			display: inline-block;
+			color: $blue;
+
+			em {
+				color: $lime;
+			}
+
+			strong {
+				color: $purp;
+			}
+			span {
+				color: $white;
+			}
+		}
+	}
+	&.html {
+		padding: 1em !important;
+		color: $white; //$blue;
+
+		/* add missing color treatments */
+		.hljs-title {
+			color: $red;
+		}
+		.hljs-attribute {
+			color: $lime;
+		}
+		.hljs-value {
+			color: $pale;
+		}
+	}
+
+	&.css {
+		@include clearfix;
+	}
+
+	p {
+		margin: 0 0 0 50px;
+		//display: inline-block;
+	}
+
+	strong {
+		font-weight: 400;
+	}
+
+}

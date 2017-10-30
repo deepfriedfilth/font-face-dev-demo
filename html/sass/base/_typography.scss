@@ -1,0 +1,36 @@
+body {
+	font-family: $bodyFont;
+	font-size: 16px;
+	line-height: 1.2;
+}
+header {
+	font-family: $monoFont;
+}
+h1, h2 {
+	font-weight: 400;
+}
+article {
+	font-size: 1.2em;
+
+	header {
+		h1 {
+			margin-bottom: 0.5em;
+			font-size: 1.5em;
+		}
+	}
+}
+p {
+	margin: 0 0 1em;
+}
+a {
+	color: $linkColor;
+	
+	i {
+		position: relative;
+		top: 5px;
+		padding: 0 0.125em;
+	}
+}
+.mono {
+	font-family: $monoFont;
+}

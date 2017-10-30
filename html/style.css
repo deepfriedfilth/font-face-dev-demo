@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("../node_modules/material-design-icons/iconfont/material-icons.css");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Color time */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  line-height: 1.2; }
+
+header {
+  font-family: "Source Code Pro", monospace; }
+
+h1, h2 {
+  font-weight: 400; }
+
+article {
+  font-size: 1.2em; }
+  article header h1 {
+    margin-bottom: 0.5em;
+    font-size: 1.5em; }
+
+p {
+  margin: 0 0 1em; }
+
+a {
+  color: #666; }
+  a i {
+    position: relative;
+    top: 5px;
+    padding: 0 0.125em; }
+
+.mono {
+  font-family: "Source Code Pro", monospace; }
+
+#main-header {
+  padding: 1.5em;
+  width: calc(100% - 3em);
+  font-size: 1.5em;
+  background: #272822;
+  color: #fff; }
+  #main-header dl span {
+    color: #fff; }
+  #main-header dt {
+    color: #CC2671; }
+  #main-header dd {
+    margin-left: 50px;
+    color: #56D3EB; }
+    #main-header dd h2 {
+      display: inline-block; }
+    #main-header dd strong {
+      font-weight: 400;
+      color: #A581FF; }
+    #main-header dd em {
+      font-style: normal;
+      color: #DFDB71; }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px; }
+
+.typed-cursor {
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+article {
+  margin-bottom: 4em;
+  padding: 2em;
+  transition: 1s opacity; }
+  article.hide {
+    opacity: 0; }
+  article footer {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto; }
+    article footer h2 {
+      margin-bottom: 1em;
+      font-size: 1.5em;
+      font-weight: 600; }
+    article footer li {
+      padding: 0.25em 0; }
+      article footer li:first-of-type {
+        padding-top: 0; }
+    article footer #vidja {
+      float: right; }
+
+code {
+  display: inline-block;
+  margin: 2em 0;
+  padding: 1em;
+  font-family: "Source Code Pro", monospace;
+  background: #272822;
+  color: #272822;
+  transition: 0.3s color; }
+  code.show {
+    color: #fff; }
+    code.show div {
+      display: inline-block;
+      color: #56D3EB; }
+      code.show div em {
+        color: #8BDE2E; }
+      code.show div strong {
+        color: #A581FF; }
+      code.show div span {
+        color: #fff; }
+  code.html {
+    padding: 1em !important;
+    color: #fff;
+    /* add missing color treatments */ }
+    code.html .hljs-title {
+      color: #CC2671; }
+    code.html .hljs-attribute {
+      color: #8BDE2E; }
+    code.html .hljs-value {
+      color: #DFDB71; }
+  code.css::after {
+    content: '';
+    display: table;
+    clear: both; }
+  code p {
+    margin: 0 0 0 50px; }
+  code strong {
+    font-weight: 400; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>@font-face demo</title>
+	<meta name="description" content="@font-face demo">
+	<meta name="author" content="Nathan Kawatski">
+
+	<link rel="stylesheet" href="style.css">
+	<!-- Syntax highlighting is cool -->
+	<link rel="stylesheet" href="../node_modules/highlight.js/styles/darcula.css">
+	<link rel="stylesheet" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
+
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<header id="main-header">
+		<div class="wrapper">
+			<dl>
+				<dt><h1>@font-face <span>{</span></h1></dt>
+				<dd><h2 id="displayProp"></h2></dd>
+				<dt><span>}</span></dt>
+				<dd></dd>
+			</dl>
+		</div>
+	</header>
+	<article class="hide">
+		<header class="wrapper">
+			<h1>blah blah blah webfonts&hellip;</h1>
+		</header>
+		<section class="wrapper">
+			<p>Remember when we were limited to a small list of "safe for web use" fonts? Ah, nostalgia&hellip;</p>
+			<div class="cell">
+				<p>Basic usage (CSS)</p>
+				<pre><code id="structure-inline" class="css show">@import url("//hello.myfonts.net/count/2fa7b0");
+@font-face {
+    font-family: 'AmasisMTStd-Light';
+    src: url('fonts/2FA7B0_0_0.eot');
+    src: url('fonts/2FA7B0_0_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_0_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_0_0.woff') format('woff'),
+         url('fonts/2FA7B0_0_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+</code></pre>
+			</div>
+			<div class="cell">
+				<p>Basic usage (JS)</p>
+
+				<pre><code id="structure-inline" class="html show">&lt;script&gt;
+   WebFontConfig = {
+      typekit: { id: 'xxxxxx' }
+   };
+
+   (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.async = true;
+      s.parentNode.insertBefore(wf, s);
+   })(document);
+&lt;/script&gt;
+</code></pre>
+			</div>
+		</section>
+		<footer class="wrapper">
+			<div class="cell">
+				<h2>Further Reading</h2>
+				<ul>
+					<li><a href=" target="_blank">Article<i class="material-icons">launch</i></a> by Author</li>
+				</ul>
+			</div>
+			<div class="cell">
+				<div id="vidja">
+					<iframe src="https://giphy.com/embed/d2YVk2ZRuQuqvVlu" width="480" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+				</div>
+			</div>
+		</footer>
+	</article>
+
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/typed.js/lib/typed.min.js"></script>
+	<script src="../node_modules/clippyjs/dist/clippy.js"></script>
+	<script src="../node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="js/highlight.pack.js"></script>
+	<!-- from https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/themes/codropstheme03/js/highlight.pack.js?ver=85 works.. but not official version? -->
+	<!-- <script src="../node_modules/highlight.js/lib/highlight.js"></script> -->
+	<script src="js/main.js"></script>
+	<script id="__bs_script__">//<![CDATA[
+		document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+</body>
+</html>
+
