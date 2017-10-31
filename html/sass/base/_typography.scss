@@ -6,8 +6,18 @@ body {
 header {
 	font-family: $monoFont;
 }
-h1, h2 {
+h1 {
 	font-weight: 400;
+}
+h2 {
+	margin-bottom: 0.5em;
+	font-size: 1.2em;
+	font-weight: 600;
+}
+h3 {
+	margin-bottom: 0.5em;
+	font-size: 1.1em;
+	font-weight: 700;
 }
 article {
 	font-size: 1.2em;

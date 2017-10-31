@@ -21,6 +21,9 @@
 
 		h2 {
 			display: inline-block;
+			margin-bottom: 0;
+			font-size: 1em;
+			font-weight: 400;
 		}
 		
 		strong {
@@ -120,7 +123,7 @@ article {
 
 	footer {
 		display: grid;
-		grid-template-columns: 60% 40%;
+		grid-template-columns: 50% 50%;
 		grid-template-rows: auto auto;
 		h2 {
 			margin-bottom: 1em;
@@ -149,7 +152,7 @@ code {
 	transition: 0.3s color;
 
 	&.show {
-		color: $white;
+		//color: $white;
 
 		div {
 			display: inline-block;

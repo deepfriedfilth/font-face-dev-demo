@@ -57,8 +57,18 @@ body {
 header {
   font-family: "Source Code Pro", monospace; }
 
-h1, h2 {
+h1 {
   font-weight: 400; }
+
+h2 {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-weight: 600; }
+
+h3 {
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+  font-weight: 700; }
 
 article {
   font-size: 1.2em; }
@@ -93,7 +103,10 @@ a {
     margin-left: 50px;
     color: #56D3EB; }
     #main-header dd h2 {
-      display: inline-block; }
+      display: inline-block;
+      margin-bottom: 0;
+      font-size: 1em;
+      font-weight: 400; }
     #main-header dd strong {
       font-weight: 400;
       color: #A581FF; }
@@ -160,7 +173,7 @@ article {
     opacity: 0; }
   article footer {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto auto; }
     article footer h2 {
       margin-bottom: 1em;
@@ -181,17 +194,15 @@ code {
   background: #272822;
   color: #272822;
   transition: 0.3s color; }
-  code.show {
-    color: #fff; }
-    code.show div {
-      display: inline-block;
-      color: #56D3EB; }
-      code.show div em {
-        color: #8BDE2E; }
-      code.show div strong {
-        color: #A581FF; }
-      code.show div span {
-        color: #fff; }
+  code.show div {
+    display: inline-block;
+    color: #56D3EB; }
+    code.show div em {
+      color: #8BDE2E; }
+    code.show div strong {
+      color: #A581FF; }
+    code.show div span {
+      color: #fff; }
   code.html {
     padding: 1em !important;
     color: #fff;

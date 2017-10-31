@@ -8,9 +8,11 @@
 	<meta name="description" content="@font-face demo">
 	<meta name="author" content="Nathan Kawatski">
 
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="favicon.png">
 	<link rel="stylesheet" href="style.css">
 	<!-- Syntax highlighting is cool -->
-	<link rel="stylesheet" href="../node_modules/highlight.js/styles/darcula.css">
+	<link rel="stylesheet" href="../node_modules/highlight.js/styles/ir-black.css">
 	<link rel="stylesheet" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
 
 	<!--[if lt IE 9]>
@@ -36,27 +38,25 @@
 		</header>
 		<section class="wrapper">
 			<p>Remember when we were limited to a small list of "safe for web use" fonts? Ah, nostalgia&hellip;</p>
-			<div class="cell">
-				<p>Basic usage (CSS)</p>
-				<pre><code id="structure-inline" class="css show">@import url("//hello.myfonts.net/count/2fa7b0");
-@font-face {
-    font-family: 'AmasisMTStd-Light';
-    src: url('fonts/2FA7B0_0_0.eot');
-    src: url('fonts/2FA7B0_0_0.eot?#iefix') format('embedded-opentype'),
-         url('fonts/2FA7B0_0_0.woff2') format('woff2'),
-         url('fonts/2FA7B0_0_0.woff') format('woff'),
-         url('fonts/2FA7B0_0_0.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-</code></pre>
-			</div>
-			<div class="cell">
-				<p>Basic usage (JS)</p>
+			<h2>Let's pull down dem font files, shall we?</h2>
+			<p>Phone home (HTML)</p>
+			<pre><code id="structure-inline" class="xml show">&lt;link rel="stylesheet" href="//hello.myfonts.net/count/2fa7b0"&gt;</code></pre>
+			<p>Phone home (CSS)</p>
+			<pre><code id="structure-inline" class="css show">@import url("//hello.myfonts.net/count/2fa7b0");</code></pre>
+			<p>Phone home (JS)</p>
 
-				<pre><code id="structure-inline" class="html show">&lt;script&gt;
+			<pre><code id="structure-inline" class="html show">&lt;script&gt;
    WebFontConfig = {
-      typekit: { id: 'xxxxxx' }
+      /*
+      typekit: { id: 'xxxxxx' },
+      google: {
+        families: ['Source Sans Pro', 'Source Code Pro']
+      },
+      */
+      custom: {
+        families: ['GalanoGrotesque'],
+        urls: ['//hello.myfonts.net/count/2fa7b0']
+      }
    };
 
    (function(d) {
@@ -67,13 +67,173 @@
    })(document);
 &lt;/script&gt;
 </code></pre>
-			</div>
+			<h3>Typical third-party @font-face snippet&hellip;</h3>
+			<pre><code class="css show">@font-face {
+    font-family: 'GalanoGrotesque-Thin';
+    src: url('fonts/2FA7B0_A_0.eot');
+    src: url('fonts/2FA7B0_A_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_A_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_A_0.woff') format('woff'),
+         url('fonts/2FA7B0_A_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face { 
+    font-family: 'GalanoGrotesque-ExtraLight';
+    src: url('fonts/2FA7B0_6_0.eot');
+    src: url('fonts/2FA7B0_6_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_6_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_6_0.woff') format('woff'),
+         url('fonts/2FA7B0_6_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GalanoGrotesque-ExtraLightItalic';
+    src: url('fonts/2FA7B0_5_0.eot');
+    src: url('fonts/2FA7B0_5_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_5_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_5_0.woff') format('woff'),
+         url('fonts/2FA7B0_5_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GalanoGrotesque-Light';
+    src: url('fonts/2FA7B0_7_0.eot');
+    src: url('fonts/2FA7B0_7_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_7_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_7_0.woff') format('woff'),
+         url('fonts/2FA7B0_7_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GalanoGrotesque-Regular';
+    src: url('fonts/2FA7B0_8_0.eot');
+    src: url('fonts/2FA7B0_8_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_8_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_8_0.woff') format('woff'),
+         url('fonts/2FA7B0_8_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GalanoGrotesque-SemiBold';
+    src: url('fonts/2FA7B0_9_0.eot');
+    src: url('fonts/2FA7B0_9_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_9_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_9_0.woff') format('woff'),
+         url('fonts/2FA7B0_9_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GalanoGrotesque-Bold';
+    src: url('fonts/2FA7B0_4_0.eot');
+    src: url('fonts/2FA7B0_4_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_4_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_4_0.woff') format('woff'),
+         url('fonts/2FA7B0_4_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}</code></pre>
+	
+			<h3>There's got to be a better way!</h3>
+			<pre><code class="css show">@font-face { /* 'GalanoGrotesque-Thin' */
+    font-family: 'GalanoGrotesque';
+    src: url('fonts/2FA7B0_A_0.eot');
+    src: url('fonts/2FA7B0_A_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_A_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_A_0.woff') format('woff'),
+         url('fonts/2FA7B0_A_0.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face { /* 'GalanoGrotesque-ExtraLight' */
+    font-family: 'GalanoGrotesque';
+    src: url('fonts/2FA7B0_6_0.eot');
+    src: url('fonts/2FA7B0_6_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_6_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_6_0.woff') format('woff'),
+         url('fonts/2FA7B0_6_0.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face { /* 'GalanoGrotesque-ExtraLightItalic' */
+    font-family: 'GalanoGrotesque';
+    src: url('fonts/2FA7B0_5_0.eot');
+    src: url('fonts/2FA7B0_5_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_5_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_5_0.woff') format('woff'),
+         url('fonts/2FA7B0_5_0.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GalanoGrotesque-Light';
+    src: url('fonts/2FA7B0_7_0.eot');
+    src: url('fonts/2FA7B0_7_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_7_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_7_0.woff') format('woff'),
+         url('fonts/2FA7B0_7_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face { /* 'GalanoGrotesque-Regular' */
+    font-family: 'GalanoGrotesque';
+    src: url('fonts/2FA7B0_8_0.eot');
+    src: url('fonts/2FA7B0_8_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_8_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_8_0.woff') format('woff'),
+         url('fonts/2FA7B0_8_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face { /* 'GalanoGrotesque-SemiBold' */
+    font-family: 'GalanoGrotesque';
+    src: url('fonts/2FA7B0_9_0.eot');
+    src: url('fonts/2FA7B0_9_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_9_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_9_0.woff') format('woff'),
+         url('fonts/2FA7B0_9_0.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face { /* 'GalanoGrotesque-Bold' */
+    font-family: 'GalanoGrotesque';
+    src: url('fonts/2FA7B0_4_0.eot');
+    src: url('fonts/2FA7B0_4_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2FA7B0_4_0.woff2') format('woff2'),
+         url('fonts/2FA7B0_4_0.woff') format('woff'),
+         url('fonts/2FA7B0_4_0.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}</code></pre>
+
+			<h3>So what did we just accomplish?</h3>
+			<p>We eliminated the need for these superfluous CSS calls:</p>
+			<pre><code class="css show">p {
+    font-family: 'GalanoGrotesque-ExtraLight';
+}
+strong {
+    font-family: 'GalanoGrotesque-Bold';
+    font-weight: 400; /* no faux bold */
+}
+em {
+    font-family: 'GalanoGrotesque-ExtraLightItalic';
+    font-style: normal; /* no faux italic */
+}
+				</code></pre>
+
 		</section>
 		<footer class="wrapper">
 			<div class="cell">
 				<h2>Further Reading</h2>
 				<ul>
-					<li><a href=" target="_blank">Article<i class="material-icons">launch</i></a> by Author</li>
+					<li><a href="https://github.com/typekit/webfontloader" target="_blank">Web Font Loader<i class="material-icons">launch</i></a> by Google/Typekit</li>
+					<li><a href="https://css-tricks.com/snippets/css/using-font-face/" target="_blank">Using @font-face<i class="material-icons">launch</i></a> by CSS Tricks</li>
+					<li><a href="https://www.smashingmagazine.com/2013/02/setting-weights-and-styles-at-font-face-declaration/" target="_blank">How To Set Weights And Styles With The @font-face Declaration<i class="material-icons">launch</i></a> by Smashing Magazine</li>					
 				</ul>
 			</div>
 			<div class="cell">
