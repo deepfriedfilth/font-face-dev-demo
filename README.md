@@ -7,7 +7,7 @@ git clone https://deepfriedfilth@bitbucket.org/deepfriedfilth/font-face-dev-demo
 ```
 
 ```
-cd css-dev-demo
+cd font-face-dev-demo
 ```
 
 ```
