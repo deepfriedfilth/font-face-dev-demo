@@ -44,7 +44,7 @@ gulp.task('default', ['styles'], function() {
 		proxy: 'at-font-face.dev',
 		browser: 'google chrome'
 	});
-	gulp.watch('sass/**/*.scss',['styles']);
+	gulp.watch('sass/**/*.scss',['styles', reload]);
 	gulp.watch('**/*.html',reload);
 	gulp.watch('js/**/*.js',reload);
 });
